@@ -4,8 +4,25 @@ import logging
 import requests
 import sys
 import traceback
+from urllib import parse as urlparse
 
-
+def getURLDomain(url):
+    try:
+        if url.find("http://")<0 and url.find("https://")<0:
+            url = "http://"+url
+        hostname = urlparse.urlparse(url)
+        hostname = hostname.hostname
+        domain = hostname.split(".")
+        newdomain = []
+        for d in domain:
+            if d != "www":
+                newdomain.append(d)
+        domain = '.'.join(newdomain)
+        return domain
+    except Exception:
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        logger.error(repr(traceback.format_exception(exc_type, exc_value, exc_traceback)))
+    return None
 
 
 def handle():
@@ -30,16 +47,16 @@ def handle():
             logger.error(repr(traceback.format_exception(exc_type, exc_value, exc_traceback)))
         if forbes_companies:
             print("companies loaded")
-            for item in range(len(forbes_companies)-1):
-                for item2 in range(item+1,len(forbes_companies)):
-                    if forbes_companies[item]['rank'] == forbes_companies[item2]['rank'] and forbes_companies[item]['company'] != forbes_companies[item2]['company']:
-                        print(forbes_companies[item]['rank'])
+            for company in forbes_companies:
+                print('{}  {}'.format(company['company'],company['website']))
     except Exception:
-        print("exception")
+        #print("exception")
         exc_type, exc_value, exc_traceback = sys.exc_info()
-        print(exc_value)
-    print("end")
+        #print(exc_value)
+    #print("end")
     return ''
 
 if __name__ == "__main__": 
 	st = handle()
+    #st1 = getURLDomain("devada.com")
+    #print(st1)
