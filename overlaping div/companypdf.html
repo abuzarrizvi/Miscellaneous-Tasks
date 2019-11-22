@@ -1,0 +1,3569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Company Summary</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      font-family: Calibri;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      height: 700px;
+      background-color: white;
+    }
+
+    .page .content-wrapper {
+      padding-left: 50px;
+      padding-top: 50px;
+      width: 50%;
+      height: 650px;
+    }
+
+    .page .content-wrapper .title-wrapper {
+      margin-bottom: 70px;
+      width: 80%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .page .content-wrapper .title-wrapper .logo-holder {
+      width: 40%;
+    }
+
+    .page .content-wrapper .title-wrapper .logo-holder img {
+      width: 190px;
+    }
+
+    .page .content-wrapper .title-wrapper .title-holder {
+      width: 60%;
+      padding-top: 50px;
+    }
+
+    .page .content-wrapper .title-wrapper .title-holder h1 {
+      font-size: 34px;
+      font-weight: bold;
+      color: #333f50;
+      text-transform: uppercase;
+    }
+
+    .page .content-wrapper .desc-holder {
+      min-height: 200px;
+    }
+
+    .page .content-wrapper .desc {
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333f50;
+      text-transform: uppercase;
+    }
+
+    .page .content-wrapper .desc sup {
+      text-transform: lowercase;
+    }
+
+    .page .content-wrapper .ranking-wrapper {
+      margin-bottom: 30px;
+    }
+
+    .page .content-wrapper .ranking-wrapper .ranking-table {
+      width: 100%;
+    }
+
+    .page .content-wrapper .ranking-wrapper .ranking-table td {
+      font-size: 24px;
+    }
+
+    .page .content-wrapper .ranking-wrapper .ranking-table td:first-child {
+      color: #ed7d31;
+      font-weight: bold;
+    }
+
+    .page .content-wrapper .source {
+      margin-bottom: 30px;
+    }
+
+    .page .content-wrapper .powered-by img {
+      width: 28px;
+    }
+
+    .page .content-wrapper .powered-by a {
+      color: #0563c1;
+      text-decoration: underline;
+    }
+
+    .page .container {
+      width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page .container header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 25px 0px 8px;
+    }
+
+    .page .container header .title {
+      padding-top: 12px;
+    }
+
+    .page .container header .title h2 {
+      font-size: 30px;
+      text-transform: uppercase;
+      color: #222a35;
+    }
+
+    .page .container header .logo img {
+      width: 60px;
+    }
+    .page .container .poweredby-container {
+      min-height: 700px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .page .container .poweredby-container .poweredby-section {
+      text-align: center;
+    }
+
+    .page .container .poweredby-container .poweredby-section p {
+      color: #8b8b8b;
+      margin: 15px 0px;
+    }
+
+    .page .container .poweredby-container .poweredby-section a {
+      text-decoration: underline;
+      color: blue;
+    }
+    .page .container .content-section-home {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 370px;
+      padding: 60px 0px;
+    }
+
+    .page .container .content-section-home .home-left-column {
+      width: 36%;
+      border-right: 1px solid #a6a6a6;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-right: 4%;
+    }
+
+    .page .container .content-section-home .home-left-column img {
+      width: 190px;
+    }
+
+    .page .container .content-section-home .home-right-column {
+      width: 55%;
+      padding-left: 5%;
+    }
+
+    .page .container .content-section-home .home-right-column h1 {
+      font-size: 34px;
+      color: #333f50;
+      text-transform: uppercase;
+    }
+
+    .page .container .content-section-home .home-right-column h1:first-child {
+      font-weight: normal;
+    }
+
+    .page .container .content-section-home .home-right-column .desc-holder {
+      min-height: 200px;
+      margin-top: 50px;
+    }
+
+    .page .container .content-section-home .home-right-column .desc {
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333f50;
+      text-transform: uppercase;
+    }
+
+    .page .container .content-section-home .home-right-column .desc sup {
+      text-transform: lowercase;
+    }
+
+    .page .container .content-section-home .home-right-column .ranking-wrapper {
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section-home .home-right-column .ranking-wrapper .ranking-table {
+      width: 100%;
+    }
+
+    .page .container .content-section-home .home-right-column .ranking-wrapper .ranking-table td {
+      font-size: 24px;
+    }
+
+    .page .container .content-section-home .home-right-column .ranking-wrapper .ranking-table td:first-child {
+      color: #ed7d31;
+      font-weight: bold;
+    }
+
+    .page .container .content-section-home .home-right-column .source {
+      margin-bottom: 60px;
+    }
+
+    .page .container .content-section-home .home-right-column .powered-by img {
+      width: 28px;
+    }
+
+    .page .container .content-section-home .home-right-column .powered-by a {
+      color: #0563c1;
+      text-decoration: underline;
+    }
+    .page .container .content-section {
+      margin-bottom: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 370px;
+    }
+
+    .page .container .content-section .news-heading {
+      margin-bottom: 10px;
+    }
+
+    .page .container .content-section .news-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section .news-box .left-column {
+      width: 60%;
+    }
+
+    .page .container .content-section .news-box .left-column .date {
+      margin-bottom: 3px;
+    }
+
+    .page .container .content-section .news-box .left-column .date p {
+      color: #8497b0;
+    }
+
+    .page .container .content-section .news-box .left-column .date p span {
+      color: #5b9bd5;
+      font-weight: bold;
+    }
+
+    .page .container .content-section .news-box .left-column .heading {
+      margin-bottom: 4px;
+      height: 58px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    .page .container .content-section .news-box .left-column .description {
+      height: 46px;
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .page .container .content-section .news-box .left-column .description p a {
+      color: #0563c1;
+      text-decoration: underline;
+    }
+
+    .page .container .content-section .news-box .right-column {
+      width: 35%;
+      padding-left: 4%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .page .container .content-section .news-box .right-column img {
+      width: 135px;
+    }
+
+    .page .container .content-section .tweet-box {
+      margin-bottom: 15px;
+      border: 1px solid #a6a6a6;
+      padding: 10px;
+      position: relative;
+    }
+    .page .container .content-section .tweet-box .line{
+    width: 1px;
+    background: #a6a6a6;
+    height: 34%;
+    position: absolute;
+    top: 72px;
+    left: 35px;
+    }
+    .page .container .content-section .tweet-box .rowName {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .page .container .content-section .tweet-box .rowName .columnOne {
+      width: 17%;
+    }
+
+    .page .container .content-section .tweet-box .rowName .columnOne img {
+      width: 50px;
+      border-radius: 150px;
+    }
+
+    .page .container .content-section .tweet-box .rowName .columnTwo {
+      width: 80%;
+    }
+
+    .page .container .content-section .tweet-box .rowName .columnTwo h6 {
+      color: #00b0f0;
+    }
+
+    .page .container .content-section .tweet-box .rowName .columnTwo p {
+      font-size: 12px;
+    }
+
+    .page .container .content-section .tweet-box .rowDesc {
+      height: 100px;
+      padding: 0 10px 0 60px;
+    }
+
+    .page .container .content-section .tweet-box .rowDesc p {
+      font-size: 14px;
+    }
+
+    .page .container .content-section .tweet-box .rowDesc p span {
+      color: #00b0f0;
+      font-weight: bold;
+    }
+
+    .page .container .content-section .video-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section .video-box .column {
+      width: 48%;
+    }
+
+    .page .container .content-section .video-box .column img {
+      width: 180px;
+    }
+
+    .page .container .content-section .news-section {
+      width: 40%;
+    }
+
+    .page .container .content-section .tweets-section {
+      min-height: 500px;
+      width: 30%;
+      padding-right: 2%;
+    }
+
+    .page .container .content-section .videos-section {
+      width: 28%;
+    }
+
+    .page .container .content-section .summary-left-column {
+      width: 70%;
+      padding-right: 20px;
+    }
+
+    .page .container .content-section .summary-left-column .description {
+      margin-bottom: 30px;
+      color: #333f50;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section {
+      min-height: 300px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section {
+      height: 322px;
+      width: 48%;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      height: 322px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section {
+      border: 1px solid #a6a6a6;
+      height: 40%;
+      padding: 10px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .profitable {
+      display: inline-block;
+      max-width: 75px;
+      text-align: center;
+      margin-right: 40px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .profitable img {
+      width: 70px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .profitable p {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 12px;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .profitable p span {
+      color: #06be30;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .share-price-table {
+      width: 100%;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .left-section .ranking-section-container .ranking-section .share-price-table td .price {
+      color: #06be30;
+      font-weight: bold;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .right-section {
+      padding: 20px;
+      min-height: 280px;
+      width: 45%;
+      border: 1px solid #a6a6a6;
+    }
+
+    .page .container .content-section .summary-left-column .chart-section .right-section .chart-svg-wrapper img {
+      width: 375px;
+    }
+
+    .page .container .content-section .summary-right-column {
+      width: 30%;
+      padding-left: 20px;
+      border-left: 1px solid #a6a6a6;
+    }
+
+    .page .container .content-section .summary-right-column .profile-picture {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .page .container .content-section .summary-right-column .profile-picture .circle {
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      display: block;
+      position: relative;
+    }
+
+    .page .container .content-section .summary-right-column .profile-picture .circle img {
+      position: absolute;
+      left: 7.5px;
+      top: 7.5px;
+      width: 110px;
+      border-radius: 150px;
+    }
+
+    .page .container .content-section .summary-right-column .profile-picture .rectangle {
+      height: 26px;
+      line-height: 26px;
+      width: 120px;
+      color: white;
+      position: absolute;
+      bottom: -10px;
+      text-align: center;
+    }
+
+    .page .container .content-section .summary-right-column .profile-name {
+      margin-bottom: 90px;
+      text-transform: capitalize;
+    }
+
+    .page .container .content-section .summary-right-column .company-info {
+      margin-bottom: 40px;
+    }
+
+    .page .container .content-section .summary-right-column .company-address p:first-child {
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section .news-left-column {
+      width: 50%;
+    }
+
+    .page .container .content-section .news-left-column .wheel-holder {
+      margin: 20px 0px;
+    }
+
+    .page .container .content-section .news-left-column .wheel-holder img {
+      width: 260px;
+    }
+
+    .page .container .content-section .news-left-column .legend-holder img {
+      width: 250px;
+    }
+
+    .page .container .content-section .news-right-column {
+      width: 50%;
+    }
+
+    .page .container .content-section .financial-left-column {
+      width: 60%;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left {
+      width: 73%;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .financial-graph {
+      border: 1px solid #a6a6a6;
+      text-align: center;
+      padding: 15px 0px;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .financial-graph img {
+      width: 365px;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .blocks-section .block {
+      width: 29%;
+      height: 85px;
+      border: 1px solid #a6a6a6;
+      display: inline-block;
+      margin-top: 18px;
+      margin-right: 24px;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .blocks-section .block:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .blocks-section .block .data-container {
+      height: 85px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .blocks-section .block .data-container .data p:first-child {
+      font-size: 13px;
+      font-weight: bold;
+      color: #666666;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .left .blocks-section .block .data-container .data p:nth-child(2) {
+      font-size: 22px;
+      font-weight: bold;
+      color: #70ad47;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right {
+      width: 22%;
+      padding: 0% 2%;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .block {
+      height: 85px;
+      border: 1px solid #a6a6a6;
+      margin-bottom: 16px;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .block .data-container {
+      height: 85px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .block .data-container .data p:first-child {
+      font-size: 13px;
+      font-weight: bold;
+      color: #666666;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .block .data-container .data p:nth-child(2) {
+      font-size: 22px;
+      font-weight: bold;
+      color: #70ad47;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .sec-button {
+      background: #00b0f0;
+      display: block;
+    }
+
+    .page .container .content-section .financial-left-column .financial-report-section .right .verticle-blocks-container .sec-button p {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #0563c1;
+    }
+
+    .page .container .content-section .financial-right-column {
+      width: 40%;
+    }
+
+    .page .container .content-section .competitors-table-container {
+      width: 100%;
+    }
+
+    .page .container .content-section .competitors-table-container table {
+      border: 2px solid #b7c2d1;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .page .container .content-section .competitors-table-container table img {
+      width: 65px;
+    }
+
+    .page .container .content-section .competitors-table-container table td {
+      width: 20%;
+      font-size: 19px;
+      text-align: center;
+      border: 2px solid #b7c2d1;
+      border-collapse: collapse;
+      padding: 8px 22px;
+    }
+
+    .page .container .content-section .competitors-table-container table td:nth-child(even) {
+      background: #f1f6fd;
+    }
+
+    .page .container .content-section .competitors-table-container table td:nth-child(odd) {
+      background: #f9f9f9;
+    }
+
+    .page .container .content-section .competitors-table-container table td:first-child {
+      text-align: left;
+      background: #6374a5;
+      color: white;
+    }
+
+    .page .container .content-section .competitors-table-container table td.picture-cell {
+      background: white;
+    }
+
+    .page .container .content-section .profile-section {
+      padding-top: 20px;
+      width: 30%;
+      border-right: 1px solid #a6a6a6;
+    }
+
+    .page .container .content-section .profile-section .name-container {
+      margin-bottom: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .page .container .content-section .profile-section .name-container .profile-picture {
+      margin-left: 20px;
+      position: relative;
+    }
+
+    .page .container .content-section .profile-section .name-container .profile-picture .circle {
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      display: block;
+      position: relative;
+    }
+
+    .page .container .content-section .profile-section .name-container .profile-picture .circle img {
+      position: absolute;
+      top: 7.5px;
+      left: 7.5px;
+      width: 110px;
+      border-radius: 150px;
+    }
+
+    .page .container .content-section .profile-section .name-container .profile-picture .rectangle {
+      height: 26px;
+      line-height: 26px;
+      width: 120px;
+      color: white;
+      position: absolute;
+      bottom: -10px;
+      text-align: center;
+    }
+
+    .page .container .content-section .profile-section .name-container .name {
+      width: 40%;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .page .container .content-section .profile-section .name-container .name p span {
+      font-weight: bold;
+    }
+
+    .page .container .content-section .profile-section .profile-info {
+      padding-right: 20px;
+    }
+
+    .page .container .content-section .profile-section .profile-info p {
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section .insights-section {
+      width: 70%;
+      padding-left: 20px;
+      padding-top: 15px;
+    }
+
+    .page .container .content-section .insights-section .insights-wheel {
+      width: 23%;
+      display: inline-block;
+    }
+
+    .page .container .content-section .insights-section .insights-wheel h2 {
+      margin-bottom: 10px;
+    }
+
+    .page .container .content-section .insights-section .insights-wheel img {
+      width: 170px;
+    }
+
+    .page .container .content-section .insights-section .qualities {
+      width: 75%;
+      display: inline-block;
+      padding-top: 25px;
+    }
+
+    .page .container .content-section .insights-section .qualities p {
+      margin-bottom: 20px;
+    }
+
+    .page .container .content-section .insights-section .qualities h3 {
+      margin-bottom: 10px;
+    }
+
+    .page .container .content-section .insights-section .qualities ul {
+      margin-left: 20px;
+    }
+
+    .page .container .content-section .insights-section .qualities ul li {
+      padding-left: 10px;
+    }
+
+    .page .container .content-section .insights-section .skills-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-top: 20px;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills {
+      width: 45%;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills h3 {
+      margin-bottom: 8px;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills p {
+      margin-bottom: 30px;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills h3 {
+      margin-bottom: 10px;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills ul {
+      margin-left: 20px;
+    }
+
+    .page .container .content-section .insights-section .skills-container .skills ul li {
+      padding-left: 10px;
+    }
+
+    .page .container footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+
+    .page .container footer img {
+      width: 28px;
+      margin-right: 5px;
+      margin-bottom: -2px;
+    }
+
+    .page .container footer p {
+      font-size: 12px;
+    }
+
+    .page .container footer a {
+      color: #0563c1;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    /*# sourceMappingURL=main.css.map */
+        </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- home page starts coverbackground=./images/home-bg.png -->
+        
+        <!-- home page ends -->
+         
+    <div class="page" >
+<!--                <div class="content-wrapper" style="background-image: url(https://media.xiq.io/static/home-bg-overlay.png); background-position: right;">-->
+<!--                    <div class="title-wrapper">-->
+<!--                        <div class="logo-holder">-->
+<!--                                <img src="https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg" alt="JPMorgan Chase &amp; Co.">-->
+<!--                        </div>-->
+<!--                        <div class="title-holder">-->
+<!--                                <h1>Account Summary JPMorgan Chase &amp; Co.</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div style="min-height: 259px;">-->
+<!--                        -->
+<!--                        <h2 class="desc">2<sup>nd</sup>  Global Top Company - Forbes 2000</h2>-->
+
+<!--                        &lt;!&ndash;<h2 class="desc">6<sup>th</sup>  Global Top Company - Forbes 2000</h2>&ndash;&gt;-->
+<!--                        <div class="ranking-wrapper">-->
+<!--                            <table class="ranking-table">-->
+<!--                                -->
+<!--                                    <tr>-->
+<!--                                    -->
+<!--                                        -->
+<!--                                        <td>9<sup>th</sup></td>-->
+<!--                                        -->
+<!--                                        -->
+<!--                                    -->
+<!--                                        -->
+<!--                                        -->
+<!--                                        <td>Top Market Value Company</td>-->
+<!--                                        -->
+<!--                                    -->
+<!--                                    </tr>-->
+<!--                                -->
+<!--                                    <tr>-->
+<!--                                    -->
+<!--                                        -->
+<!--                                        <td>6<sup>th</sup></td>-->
+<!--                                        -->
+<!--                                        -->
+<!--                                    -->
+<!--                                        -->
+<!--                                        -->
+<!--                                        <td>Top Profit Company</td>-->
+<!--                                        -->
+<!--                                    -->
+<!--                                    </tr>-->
+<!--                                -->
+<!--                                    <tr>-->
+<!--                                    -->
+<!--                                        -->
+<!--                                        <td>39<sup>th</sup></td>-->
+<!--                                        -->
+<!--                                        -->
+<!--                                    -->
+<!--                                        -->
+<!--                                        -->
+<!--                                        <td>Top Sales Company</td>-->
+<!--                                        -->
+<!--                                    -->
+<!--                                    </tr>-->
+<!--                                -->
+<!--                                    <tr>-->
+<!--                                    -->
+<!--                                        -->
+<!--                                        <td>7<sup>th</sup></td>-->
+<!--                                        -->
+<!--                                        -->
+<!--                                    -->
+<!--                                        -->
+<!--                                        -->
+<!--                                        <td>Top Assets Company</td>-->
+<!--                                        -->
+<!--                                    -->
+<!--                                    </tr>-->
+<!--                                -->
+<!--                            </table>-->
+
+<!--                        </div>-->
+
+<!--                        <p class="source">Source: Forbes Global 2000 Companies in 2019-->
+<!--                        </p>-->
+<!--                        -->
+<!--                    </div>-->
+<!--                    <div class="powered-by">-->
+<!--                        <p>Nov 08<sup>th</sup>, 2019</p>-->
+<!--                        <p>Powered By <img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ"></p>-->
+<!--                        <p><a href="https://xiqinc.com/" target="_blank" rel="noopener noreferrer">-->
+<!--                                www.xiqinc.com-->
+<!--                            </a>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="container">
+                    <div class="content-section-home">
+                        <div class="home-left-column">
+
+                               <img src="https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg" alt="JPMorgan Chase &amp; Co.">
+
+                        </div>
+                        <div class="home-right-column">
+                            <h1>JPMorgan Chase &amp; Co.</h1>
+                            <h1>Account Summary</h1>
+                            <div class="desc-holder" style="min-height: 259px;">
+                                
+                                <h2 class="desc">2<sup>nd</sup>  Global Top Company - Forbes 2000</h2>
+
+                                <!--<h2 class="desc">6<sup>th</sup>  Global Top Company - Forbes 2000</h2>-->
+                                <div class="ranking-wrapper">
+                                    <table class="ranking-table">
+                                        
+                                            <tr>
+                                            
+                                                
+                                                <td>9<sup>th</sup></td>
+                                                
+                                                
+                                            
+                                                
+                                                
+                                                <td>Top Market Value Company</td>
+                                                
+                                            
+                                            </tr>
+                                        
+                                            <tr>
+                                            
+                                                
+                                                <td>6<sup>th</sup></td>
+                                                
+                                                
+                                            
+                                                
+                                                
+                                                <td>Top Profit Company</td>
+                                                
+                                            
+                                            </tr>
+                                        
+                                            <tr>
+                                            
+                                                
+                                                <td>39<sup>th</sup></td>
+                                                
+                                                
+                                            
+                                                
+                                                
+                                                <td>Top Sales Company</td>
+                                                
+                                            
+                                            </tr>
+                                        
+                                            <tr>
+                                            
+                                                
+                                                <td>7<sup>th</sup></td>
+                                                
+                                                
+                                            
+                                                
+                                                
+                                                <td>Top Assets Company</td>
+                                                
+                                            
+                                            </tr>
+                                        
+                                    </table>
+
+                                </div>
+
+                                <p class="source">Source: Forbes Global 2000 Companies in 2019
+                                </p>
+                                
+                            </div>
+
+<!--                       <p class="source">Source: Forbes Global 2000 Companies in 2019-->
+<!--                       </p>-->
+                       <div class="powered-by">
+                        <p>Nov 08<sup>th</sup>, 2019</p>
+                        <p>Powered By <img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ"></p>
+                        <p><a href="https://xiqinc.com/" target="_blank" rel="noopener noreferrer">
+                                www.xiqinc.com
+                            </a>
+                        </p>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    </div>
+ 
+        <!-- summary page starts -->
+         
+    <div class="page">
+            <div class="container">
+                <header>
+                    <div class="title">
+                        
+                            <h2>SUMMARY</h2>
+                         
+                    </div>
+                    <div class="logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg" alt="">
+                    </div>
+                </header>
+                <div class="content-section">
+                    <div class="summary-left-column">
+                        <div style="min-height:179px; max-height: 187px;">
+                            
+                            
+                                <p class="description">
+                                    JPMorgan Chase &amp; Co., a financial holding company, provides various financial services worldwide. The company operates through four segments: Consumer &amp; Community Banking, Corporate &amp; Investment Bank, Commercial Banking, and Asset Management.
+                                </p>
+                            
+                                <p class="description">
+                                     The Consumer &amp; Community Banking segment offers deposit and investment products and services to consumers; lending, deposit, and cash management and payment solutions to small businesses; and residential mortgages and home equity loans, as well as provides credit cards, payment services, payment processing services, and auto and student loans. The Corporate &amp; Investment Bank segment provides investment banking, market-making, prime brokerage, and treasury and securities products and services to corporations, investors, financial institutions, and government and municipal entities.
+                                </p>
+                            
+                            
+
+                        </div>
+                        <div class="chart-section">
+                            <div class="left-section">
+                                <div class="ranking-section-container" >
+                                        <div class="ranking-section" >
+                                                
+                                                <h3>Ranking</h3>
+                                                
+                                                
+                                                    <div class="profitable">
+                                                        <img src=D:\XIQ-projects\mobile-api-services\mobile-api-services\static/admin/pptImages/fortune_500.png alt="pic">
+                                                        <p><span>20<sup>th</sup></span> Most Profitable</p>
+                                                    </div>
+                                                
+                                                    <div class="profitable">
+                                                        <img src=D:\XIQ-projects\mobile-api-services\mobile-api-services\static/admin/pptImages/forbes_global_2000.png alt="pic">
+                                                        <p><span>2<sup>nd</sup></span> Most Innovative</p>
+                                                    </div>
+                                                
+                                                <!--<div class="profitable">
+                                                    <img src="./images/innovative-pic.png" alt="pic">
+                                                    <p><span>6<sup>th</sup></span> Most Innovative</p>
+                                                </div>-->
+                                            </div>
+                                            <div class="ranking-section">
+                                                    <table class="share-price-table">
+                                                            <tr>
+                                                                <td>Share Price (JPM)</td>
+                                                                <td><span class="price">$130.08</span></td>
+                                                                
+                                                            </tr>
+                                                                <tr>
+                                                                <td>Market Cap</td>
+                                                                <td><span class="price">$356.49B</span></td>
+                                                                
+                                                            </tr>
+                                                                <tr>
+                                                                <td>Fiscal Year</td>
+                                                                <td>Dec 31</td>
+                                                                
+                                                            </tr>
+                                                           
+                                                        </table>
+                                            </div>
+                                </div>
+                                
+                            </div>
+                            <div class="right-section">
+                                    <h3 style="
+                                        padding-bottom: 10px;">Annual Stock Chart</h3>
+                                    <div class="chart-svg-wrapper">
+<!--                                        <img src="./static/admin/pdfImages/charts.svg" alt="chart">-->
+                                        <img style="width: 375px; height: 239px;" src=https://d1vin4er4t7w5i.cloudfront.net/?module=chartImage&amp;grid=1&amp;type=AREA&amp;gradientTop=1720824268&amp;gradientBottom=1720824268&amp;leftMargin=10&amp;bottomMargin=20&amp;lineColor=11618&amp;rawOutput=1&amp;width=617&amp;height=230&amp;symbol=JPM&amp;time=1Y alt="chart">
+
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-right-column">
+                        <div class="profile-picture">
+                            <div class="circle" style="background-color: #ed5944; ">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/jamie_dimon_65634172.jpg alt="profile">
+                            </div>
+                            <div class="rectangle" style="background-color: #ff0000;">Driver</div>
+                        </div>
+                        <div class="profile-name">
+                            <h3>James Dimon</h3>
+                            <h4>Chairman and Chief Executive Officer</h4>
+                            <p>New York, New York</p>
+                        </div>
+                        <div class="company-info">
+                            <h1 style="width: 93%;">JPMorgan Chase &amp; Co.</h1>
+                            <p><a href=jpmorganchase.com target="_blank" rel="noopener noreferrer">
+                                jpmorganchase.com
+                            </a></p>
+                        </div>
+                        <div class="company-address">
+                            <p style="max-width:380px;">
+                                    JPMorgan Chase &amp; Co.  270 Park Avenue New York, NY 10017 United States 
+                                    
+                            </p>
+                            
+                            <p>
+                                    Phone: 1-212-270-6000
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                        <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                            www.xiqonline.com
+                        </a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+ 
+        <!-- summary page ends -->
+
+        <!-- Triggers page1 starts -->
+         
+<div class="page">
+            <div class="container">
+                <header>
+                    <div class="title">
+                        <h2>TRIGGERS</h2>
+                    </div>
+                    <div class="logo">
+                        <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                    </div>
+                </header>
+                <div class="content-section">
+                    <div class="news-left-column">
+                        <h2 class="news-heading" style="color: rgb(0, 0, 0);">PULSE - 30 DAYS</h2>
+                        <div class="wheel-holder" style="position: relative;">
+
+
+                                <div id="container" style="min-width: 310px; height: 256px; max-width: 600px; margin: 0 auto;">
+
+                                </div>
+                                <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+                                <script>
+                                    Highcharts.chart('container', {
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: 0,
+                                        plotShadow: false
+                                    },
+                                    title: {
+                                        text: '',
+                                        align: 'left',
+                                        verticalAlign: 'middle',
+                                        y: 11,
+                                        x: 112
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            dataLabels: {
+                                                enabled: false,
+                                                distance: -50,
+                                                style: {
+                                                    fontWeight: 'bold',
+                                                    color: 'white'
+                                                }
+                                            },
+                                            startAngle: 0,
+                                            endAngle: 360,
+                                            center: ['16%', '45%'],
+                                            size: '110%'
+                                        }
+                                    },
+                                    series: [{
+                                        type: 'pie',
+                                        name: 'Browser share',
+                                        innerSize: '75%',
+                                        data: [
+                                                
+                                                {
+                                                    name: 'alert_3',
+                                                    y: 0.372,
+                                                    color : '#93A4BA'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_22',
+                                                    y: 2.974,
+                                                    color : '#D24556'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_8',
+                                                    y: 11.896,
+                                                    color : '#6C35C0'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_11',
+                                                    y: 2.974,
+                                                    color : '#7ED6FF'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_20',
+                                                    y: 0,
+                                                    color : '#30374E'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_15',
+                                                    y: 5.576,
+                                                    color : '#009524'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_24',
+                                                    y: 1.859,
+                                                    color : '#F1681E'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_5',
+                                                    y: 31.227,
+                                                    color : '#4DC929'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_23',
+                                                    y: 12.639,
+                                                    color : '#A64E00'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_9',
+                                                    y: 7.063,
+                                                    color : '#006FF1'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_10',
+                                                    y: 0,
+                                                    color : '#00C7C3'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_18',
+                                                    y: 0.372,
+                                                    color : '#AEA6E8'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_13',
+                                                    y: 3.346,
+                                                    color : '#F68CAD'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_12',
+                                                    y: 2.23,
+                                                    color : '#F59223'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_14',
+                                                    y: 1.859,
+                                                    color : '#E5A784'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_17',
+                                                    y: 6.691,
+                                                    color : '#1A3A96'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_16',
+                                                    y: 1.487,
+                                                    color : '#B846CA'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_19',
+                                                    y: 4.089,
+                                                    color : '#F4C600'
+                                                }
+                                                
+                                                        ,
+                                                    
+                                                
+                                                {
+                                                    name: 'alert_21',
+                                                    y: 3.346,
+                                                    color : '#B83E78'
+                                                }
+                                                
+                                                
+
+                                        ]
+                                    }]
+                                });
+
+                                  </script>
+                                 <div style="
+                                        position: absolute;
+                                        top: 74px;
+                                        left: 88px;
+                                        z-index: 99999999999;
+                                        text-align: center;
+                                        background-color: transparent;
+                                    "><p style="font-size:44px;"><b>269</b></p><p style="font-size:22px;"><b>Sales Triggers</b></p></div>
+								<div style="
+									position: absolute;
+									top: 238px;
+									left: 540px;
+									z-index: 99999999999;
+									text-align: center;
+									background-color: #fefdfd;
+									min-width: 150px;
+									min-height: 30px;
+									"><p style="font-size:44px;"><b></b></p><p style="font-size:22px;"><b></b></p></div>
+<!--                            <img src="./images/salestriggers-wheel2.png" alt="wheel">-->
+                        </div>
+                        <div class="legend-holder">
+                            <h5 style="font-weight: bold; padding-bottom: 10px;">LEGEND</h5>
+                            <img src="https://media.xiq.io/static/legend_1.png" alt="legend">
+                        </div>
+                    </div>
+                    <div class="news-right-column" style="min-height: 500px;">
+                        
+                            
+                                <h2 class="news-heading" style="color: #6C35C0;">CXO NEWS</h2>
+                            
+                            <div class="news-box" style="margin-bottom: 25px;">
+                                <div class="left-column"  >
+                                    <div class="date">
+                                        <p>
+                                            <span>NOV 07, 2019 | </span>finance.yahoo.com
+                                        </p>
+                                    </div>
+                                    <div class="heading">
+                                            <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316345827 target="_blank" rel="noopener noreferrer">
+                                            <h3>Jamie Dimon&#39;s Interview With CNBC</h3>
+                                            </a>
+                                    </div>
+                                    <div class="description">
+                                        <p>Since the financial crisis, JPMorgan Chase &amp; Co. (NYSE:JPM) has become the largest U.S. bank, surpassing Wells Fargo &amp; Co. (NYSE:WFC). This is thanks to the outst...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316345827 target="_blank" rel="noopener noreferrer">Read More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                    <div class="right-column">
+                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//ec2-54-200-50-167.us-west-2.compute.amazonaws.com/static/admin/upload/c56717f8-0211-11ea-9a2a-06945eaf9ebf.jpeg&amp;width=111&amp;height=84&amp;articleid=316345827 target="_blank" rel="noopener noreferrer">
+                                            <img src=https://image.xiq.io/returnimage/?url=http%3A//ec2-54-200-50-167.us-west-2.compute.amazonaws.com/static/admin/upload/c56717f8-0211-11ea-9a2a-06945eaf9ebf.jpeg&amp;width=111&amp;height=84&amp;articleid=316345827 alt="dp">
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        
+                            
+                            <div class="news-box" style="margin-bottom: 25px;">
+                                <div class="left-column"  >
+                                    <div class="date">
+                                        <p>
+                                            <span>NOV 07, 2019 | </span>news.bloomberglaw.com
+                                        </p>
+                                    </div>
+                                    <div class="heading">
+                                            <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316324807 target="_blank" rel="noopener noreferrer">
+                                            <h3>JPMorgan Chase Worker’s Resignation Fatal to Leave-Bias Suit</h3>
+                                            </a>
+                                    </div>
+                                    <div class="description">
+                                        <p>A former JPMorgan Chase &amp; Co. sales manager can’t pursue claims he was illegally assigned to a lesser job following leave to care for his sick mother because he q...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316324807 target="_blank" rel="noopener noreferrer">Read More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                    <div class="right-column">
+                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//db0ip7zd23b50.cloudfront.net/dims4/default/d84edc1/2147483647/crop/1021x392%2B0%2B183/resize/959x369%3E/quality/90/%3Furl%3Dhttp%3A//bloomberg-bna-brightspot.s3.amazonaws.com/d7/52/7907eb41496eba9503fa36032e4e/gettyimages-903876222.jpg&amp;width=111&amp;height=84&amp;articleid=316324807 target="_blank" rel="noopener noreferrer">
+                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//db0ip7zd23b50.cloudfront.net/dims4/default/d84edc1/2147483647/crop/1021x392%2B0%2B183/resize/959x369%3E/quality/90/%3Furl%3Dhttp%3A//bloomberg-bna-brightspot.s3.amazonaws.com/d7/52/7907eb41496eba9503fa36032e4e/gettyimages-903876222.jpg&amp;width=111&amp;height=84&amp;articleid=316324807 alt="dp">
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        
+                            
+                            <div class="news-box" style="margin-bottom: 25px;">
+                                <div class="left-column"  >
+                                    <div class="date">
+                                        <p>
+                                            <span>NOV 07, 2019 | </span>foxbusiness.com
+                                        </p>
+                                    </div>
+                                    <div class="heading">
+                                            <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316291439 target="_blank" rel="noopener noreferrer">
+                                            <h3>AOC Joins in on Criticism of Jamie Dimon: &#39;Billionaires Are Asking for a Safe Space&#39;</h3>
+                                            </a>
+                                    </div>
+                                    <div class="description">
+                                        <p>New York Rep. Alexandria Ocasio-Cortez joined in on recent criticism of JPMorgan Chase CEO Jamie Dimon by saying he&#39;s a billionaire &quot;asking for a safe space&quot; amid...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316291439 target="_blank" rel="noopener noreferrer">Read More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                    <div class="right-column">
+                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//media.foxbusiness.com/BrightCove/854081161001/201911/1037/854081161001_6101080453001_6101079863001-vs.jpg&amp;width=111&amp;height=84&amp;articleid=316291439 target="_blank" rel="noopener noreferrer">
+                                            <img src=https://image.xiq.io/returnimage/?url=http%3A//media.foxbusiness.com/BrightCove/854081161001/201911/1037/854081161001_6101080453001_6101079863001-vs.jpg&amp;width=111&amp;height=84&amp;articleid=316291439 alt="dp">
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        
+
+                    </div>
+                </div>
+                <footer>
+                        <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                            <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                www.xiqonline.com
+                            </a>
+                        </p>
+                </footer>
+            </div>
+        </div>
+
+
+ 
+        <!-- Triggers page1 ends -->
+
+        <!-- Triggers page2 starts -->
+         
+<div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>TRIGGERS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+                        <div class="content-section">
+                            <div class="news-right-column" style="min-height: 500px;">
+                                
+                                    
+                                        
+                                            <h2 class="news-heading" style="color: #D24556;">CXO MOVES</h2>
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 05, 2019 | </span>financialadvisoriq.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316057648 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Loses Pair of Wealth Advisors to This Growing Competitor</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Snowden Lane Partners has poached a team of advisors from JPMorgan, Snowden Lane says.The Boyd Richard Group, led by Thomas Boyd and James Richard, has joined Sno...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316057648 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//www.financialadvisoriq.com/images/FAIQ/sso-logo.png%3F8.410.23&amp;width=111&amp;height=84&amp;articleid=316057648 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//www.financialadvisoriq.com/images/FAIQ/sso-logo.png%3F8.410.23&amp;width=111&amp;height=84&amp;articleid=316057648 alt="dp">
+                                                            </a>
+                                                    
+
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 04, 2019 | </span>economictimes.indiatimes.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315976554 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JP Morgan Appoints Four Experts to CCBSI Team</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>The midcap sector in India is vibrant and as these companies go beyond their domestic market to do business, their needs evolve, says Pravin Advani.JP Morgan has ...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315976554 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//img.etimg.com/thumb/msid-71905882%2Cwidth-210%2Cimgsize-423237%2Cresizemode-4/jp-morgan-appoints-four-experts-to-ccbsi-team.jpg&amp;width=111&amp;height=84&amp;articleid=315976554 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//img.etimg.com/thumb/msid-71905882%2Cwidth-210%2Cimgsize-423237%2Cresizemode-4/jp-morgan-appoints-four-experts-to-ccbsi-team.jpg&amp;width=111&amp;height=84&amp;articleid=315976554 alt="dp">
+                                                            </a>
+                                                    
+
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 21, 2019 | </span>news.efinancialcareers.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314768991 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan&#39;s Latest Tech Hire Is Crazy and Wonderful</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>JPMorgan is still hiring for the Seattle engineering hub where it keeps its cloud security developers. It was already pretty clear that JPM would be chasing Micro...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314768991 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/10/turtle.jpg&amp;width=111&amp;height=84&amp;articleid=314768991 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=http%3A//news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/10/turtle.jpg&amp;width=111&amp;height=84&amp;articleid=314768991 alt="dp">
+                                                            </a>
+                                                    
+
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                
+
+
+                            </div>
+
+
+                            <div class="news-right-column" style="min-height: 500px;">
+                                
+                                    
+                                        
+                                            <h2 class="news-heading" style="color: #7ED6FF;">DEALS</h2>
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 06, 2019 | </span>solardaily.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316381805 target="_blank" rel="noopener noreferrer">
+                                                                <h3>Prism Solar Expands Solar Panel Deployments for JPMorgan Chase</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Genie Energy Ltd., a global provider of energy services, announced that its solar manufacturing subsidiary, Prism Solar Technologies (Prism Solar), has received a...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316381805 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//cdn1.lockerdomecdn.com/uploads/912333f1090eaddc291c348bead09a6dc198d32bfb84b0705605cbe6d3d45836_large&amp;width=111&amp;height=84&amp;articleid=316381805 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//cdn1.lockerdomecdn.com/uploads/912333f1090eaddc291c348bead09a6dc198d32bfb84b0705605cbe6d3d45836_large&amp;width=111&amp;height=84&amp;articleid=316381805 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 05, 2019 | </span>foxbusiness.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316092371 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Creates Unit Backing Quest for the Next Airbnb</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>JPMorgan Chase, the largest U.S. lender, is setting up a unit that will support venture capital firms backing startups with the potential to become the next Airbn...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316092371 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//media.foxbusiness.com/BrightCove/854081161001/201906/2558/854081161001_6047151576001_6047146464001-vs.jpg&amp;width=111&amp;height=84&amp;articleid=316092371 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=http%3A//media.foxbusiness.com/BrightCove/854081161001/201906/2558/854081161001_6047151576001_6047146464001-vs.jpg&amp;width=111&amp;height=84&amp;articleid=316092371 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 30, 2019 | </span>msn.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315614342 target="_blank" rel="noopener noreferrer">
+                                                                <h3>BRIEF-Kaleido Biosciences Says Co &amp; Cadena Bio Entered Into Credit Agreement With JPMorgan Chase Bank</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Oct 30 (Reuters) - Kaleido Biosciences Inc:* KALEIDO BIOSCIENCES INC - CO &amp; CADENA BIO INC ENTERED INTO CREDIT AGREEMENT WITH JPMORGAN CHASE BANK* KALEIDO BIOSCIE...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315614342 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//img-s-msn-com.akamaized.net/tenant/amp/entityid/AAy0gvU.img%3Fh%3D100%26w%3D100%26m%3D6%26q%3D60%26u%3Dt%26o%3Df%26l%3Df&amp;width=111&amp;height=84&amp;articleid=315614342 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//img-s-msn-com.akamaized.net/tenant/amp/entityid/AAy0gvU.img%3Fh%3D100%26w%3D100%26m%3D6%26q%3D60%26u%3Dt%26o%3Df%26l%3Df&amp;width=111&amp;height=84&amp;articleid=315614342 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+
+                                
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                            </footer>
+
+            </div>
+
+        </div>
+        
+ 
+        <!-- Triggers page2 ends -->
+
+        <!-- Triggers page3 starts -->
+         
+<div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>TRIGGERS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+                        <div class="content-section">
+                            <div class="news-right-column" style="min-height: 500px;">
+                                
+                                    
+                                        
+                                            <h2 class="news-heading" style="color: #009524;">EARNINGS</h2>
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 04, 2019 | </span>jpmorganchaseco.gcs-web.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316005118 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Chase Files Form 10-Q for the Quarterly Period Ended September 30, 2019</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Download PDFNEW YORK--(BUSINESS WIRE)--Nov. 4, 2019-- JPMorgan Chase &amp; Co. (NYSE: JPM) (“JPMorgan Chase” or the “Firm”) has filed its Quarterly Report on Form 10-...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316005118 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//jpmorganchaseco.gcs-web.com/sites/g/files/knoqqb24646/themes/site/nir_pid2240/client/images/hero-investor-relations3.png&amp;width=111&amp;height=84&amp;articleid=316005118 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//jpmorganchaseco.gcs-web.com/sites/g/files/knoqqb24646/themes/site/nir_pid2240/client/images/hero-investor-relations3.png&amp;width=111&amp;height=84&amp;articleid=316005118 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 23, 2019 | </span>institutionalinvestor.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314932458 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan, Morgan Stanley Continue to Dominate U.S. Sales</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>(Bigstock photo)The research business may be undergoing massive changes, but the top sales teams are still the same.For the third year in a row, JPMorgan Chase &amp; ...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314932458 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//institutionalinvestor.euromoneycdn.com/media/AMG/II/articles/2019/10/23/AllAmerica_JPMorgan.jpg&amp;width=111&amp;height=84&amp;articleid=314932458 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//institutionalinvestor.euromoneycdn.com/media/AMG/II/articles/2019/10/23/AllAmerica_JPMorgan.jpg&amp;width=111&amp;height=84&amp;articleid=314932458 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 21, 2019 | </span>koreaherald.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314717352 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JP Morgan Chase, Societe General Bagged W8b From Controversial Derivatives Products: Data</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>BUSINESSJP Morgan Chase headquarters in New York (Reuters)Overseas investment banks JP Morgan Chase and Societe General earned a combined commission income of nea...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=314717352 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                        
+                                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//res.heraldm.com/content/image/2019/10/21/20191021000565_0.jpg&amp;width=111&amp;height=84&amp;articleid=314717352 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=http%3A//res.heraldm.com/content/image/2019/10/21/20191021000565_0.jpg&amp;width=111&amp;height=84&amp;articleid=314717352 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                
+
+
+                            </div>
+
+
+                            <div class="news-right-column" style="min-height: 500px;">
+                                
+                                    
+                                        
+                                            <h2 class="news-heading" style="color: #006FF1;">LEGAL</h2>
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 08, 2019 | </span>finance.yahoo.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316360407 target="_blank" rel="noopener noreferrer">
+                                                                <h3>Citi, Deutsche Get Go-ahead to Probe Regulator Witnesses in Landmark Cartel Case</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>By Byron KayeSYDNEY (Reuters) - Citigroup Inc &lt;C.N&gt; and Deutsche Bank AG &lt;DBKGn.DE&gt; may cross-examine four antitrust investigators involved in a criminal cartel p...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316360407 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//s.yimg.com/uu/api/res/1.2/Zj9fSRg9qHUnXYb2zszC8g--%7EB/aD02MTg7dz03OTk7c209MTthcHBpZD15dGFjaHlvbg--/https%3A//media.zenfs.com/en-US/reuters-finance.com/9962cb8f79b2b205da5ca2bac3b8ec23&amp;width=111&amp;height=84&amp;articleid=316360407 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//s.yimg.com/uu/api/res/1.2/Zj9fSRg9qHUnXYb2zszC8g--%7EB/aD02MTg7dz03OTk7c209MTthcHBpZD15dGFjaHlvbg--/https%3A//media.zenfs.com/en-US/reuters-finance.com/9962cb8f79b2b205da5ca2bac3b8ec23&amp;width=111&amp;height=84&amp;articleid=316360407 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 06, 2019 | </span>afr.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316188629 target="_blank" rel="noopener noreferrer">
+                                                                <h3>Investment Bankers Face Their High Noon in ACCC Cartel Case</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Nearly three years later, in June 2018, charges were laid against ANZ, Citi, Deutsche and the six top executives. The investment banking industry was sideswiped. ...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316188629 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//static.ffx.io/images/%24zoom_0.396%2C%24multiply_0.7554%2C%24ratio_1.777778%2C%24width_1059%2C%24x_358%2C%24y_0/t_crop_custom/e_sharpen%3A25%2Cq_85%2Cf_auto/94d57c81397a88fdc039a8e53e186ab3ea72999b&amp;width=111&amp;height=84&amp;articleid=316188629 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//static.ffx.io/images/%24zoom_0.396%2C%24multiply_0.7554%2C%24ratio_1.777778%2C%24width_1059%2C%24x_358%2C%24y_0/t_crop_custom/e_sharpen%3A25%2Cq_85%2Cf_auto/94d57c81397a88fdc039a8e53e186ab3ea72999b&amp;width=111&amp;height=84&amp;articleid=316188629 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box" style="margin-bottom: 25px;">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 06, 2019 | </span>news.bloomberglaw.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316197825 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Warns That Ignoring Polish FX-Loan Risk Is a Mistake</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>The month-long rally in the zloty and Polish banks following a European court ruling in a case on foreign-currency mortgages is misguided and susceptible to polit...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316197825 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//news.bloomberglaw.com/public/twitter-card-default.jpg&amp;width=111&amp;height=84&amp;articleid=316197825 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//news.bloomberglaw.com/public/twitter-card-default.jpg&amp;width=111&amp;height=84&amp;articleid=316197825 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+
+                                
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                            </footer>
+
+            </div>
+
+        </div>
+
+ 
+        <!-- Triggers page3 ends -->
+
+        <!-- Financials page starts -->
+
+         
+
+    <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>FINANCIAL OVERVIEW</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+
+                        <div class="content-section">
+                            <div class="financial-left-column">
+                                    <h2 class="news-heading" style="color: rgb(0, 0, 0);">KEY METRICS & REPORTS</h2>
+                                    <div class="financial-report-section">
+                                            <div class="left">
+                                                    <div class="financial-graph">
+                                                        <h3 style="
+                                                            padding-bottom: 5px;">Annual Stock Chart</h3>
+<!--                                                       <img src="./static/admin/pdfImages/charts.svg" alt="graph">-->
+                                                        <img style="width: 365px;height: 230px;" src=https://d1vin4er4t7w5i.cloudfront.net/?module=chartImage&amp;grid=1&amp;type=AREA&amp;gradientTop=1720824268&amp;gradientBottom=1720824268&amp;leftMargin=10&amp;bottomMargin=20&amp;lineColor=11618&amp;rawOutput=1&amp;width=617&amp;height=230&amp;symbol=JPM&amp;time=1Y alt="graph">
+                                                    </div>
+                                                    <div class="blocks-section">
+                                                        <div class="block">
+                                                            <div class="data-container">
+                                                                    <div class="data">
+                                                                            <p>Share Price</p>
+                                                                            <p>$130.08</p>
+                                                                        </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="block">
+                                                                <div class="data-container">
+                                                                        <div class="data">
+                                                                                <p>Revenue</p>
+                                                                                <p>$111B</p>
+                                                                            </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="block">
+                                                                    <div class="data-container">
+                                                                            <div class="data">
+                                                                                    <p>Employees</p>
+                                                                                    <p>256K</p>
+                                                                                </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="block">
+                                                                        <div class="data-container">
+                                                                                <div class="data">
+                                                                                        <p>Gross Profit</p>
+                                                                                        <p>$103.98B</p>
+                                                                                    </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="block">
+                                                                            <div class="data-container">
+                                                                                    <div class="data">
+                                                                                            <p>Market Cap</p>
+                                                                                            <p>$356.49B</p>
+                                                                                        </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="block">
+                                                                                <div class="data-container">
+                                                                                        <div class="data">
+                                                                                                <p>Operating Margin</p>
+                                                                                                <p>39.34%</p>
+                                                                                            </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                    </div>
+                                                </div>
+                                            <div class="right">
+                                                    <div class="verticle-blocks-container">
+                                                            <a href=https://xiqonline.com/secfiling/466 target="_blank" class="sec-button">
+                                                                <div class="block">
+                                                                        <div class="data-container">
+                                                                                <p>SEC FILING</p>
+                                                                            </div>
+                                                                </div>
+
+                                                                </a>
+                                                                <div class="block">
+                                                                        <div class="data-container">
+                                                                                <div class="data">
+                                                                                        <p>Net Income</p>
+                                                                                        <p>$31.22B</p>
+                                                                                    </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="block">
+                                                                            <div class="data-container">
+                                                                                    <div class="data">
+                                                                                            <p>Qty.Rev Growth</p>
+                                                                                            <p>3.30%</p>
+                                                                                        </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="block">
+                                                                                <div class="data-container">
+                                                                                        <div class="data">
+                                                                                                <p>EBITDA (TTM)</p>
+                                                                                                <p>N/A</p>
+                                                                                            </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="block">
+                                                                                    <div class="data-container">
+                                                                                            <div class="data">
+                                                                                                    <p>EPS (TTM)</p>
+                                                                                                    <p>9.27</p>
+                                                                                                </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                    </div>
+
+                                                </div>
+                                    </div>
+
+
+                            </div>
+                            <div class="financial-right-column">
+                                
+                                    
+                                        
+                                            <h2 class="news-heading" style="color: rgb(0, 0, 0);">NEWS</h2>
+                                        
+                                        <div class="news-box">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>NOV 05, 2019 | </span>businessinsider.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316061747 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Is Forming a New VC Coverage Group in Its Commercial Bank and Hired Four Exes Away From Silicon Valley Bank to Lead It</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>	JPMorgan has formed a VC-focused coverage group that will be housed in its commercial bank, and has hired four people away from Silico...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=316061747 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//image.businessinsider.com/5ccd9d46021b4c2fe257be43%3Fwidth%3D600%26format%3Djpeg%26auto%3Dwebp&amp;width=111&amp;height=84&amp;articleid=316061747 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//image.businessinsider.com/5ccd9d46021b4c2fe257be43%3Fwidth%3D600%26format%3Djpeg%26auto%3Dwebp&amp;width=111&amp;height=84&amp;articleid=316061747 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 29, 2019 | </span>axios.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315473323 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Is the Latest Big Company to Prep for an Economic Downturn</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>&quot;JPMorgan is tightening its belt more than in previous years amid a growing number of potential pitfalls for the economy,&quot; Bloomberg&#39;s ...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315473323 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=https%3A//images.axios.com/D3a-M1nJEco9YqMqU8lSQ6b7AB8%3D/0x0%3A1920x1080/1920x1080/2019/10/29/1572349476359.jpg&amp;width=111&amp;height=84&amp;articleid=315473323 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=https%3A//images.axios.com/D3a-M1nJEco9YqMqU8lSQ6b7AB8%3D/0x0%3A1920x1080/1920x1080/2019/10/29/1572349476359.jpg&amp;width=111&amp;height=84&amp;articleid=315473323 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                        
+                                        <div class="news-box">
+                                            <div class="left-column" >
+                                                <div class="date">
+                                                    <p>
+                                                        <span>OCT 28, 2019 | </span>seekingalpha.com
+                                                    </p>
+                                                </div>
+                                                <div class="heading">
+                                                        <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315411006 target="_blank" rel="noopener noreferrer">
+                                                                <h3>JPMorgan Closes Special Situation Fund With Over $1B in Commitments</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="description">
+                                                    <p>JPMorgan ( JPM +0.7) Asset Management reports the final closing of its Lynstone Special Situation Fund with 1.06B in capital raised fro...  <a href=http://xiqinc.app.link/i8guDBexRL/?entity=article&amp;source=companypdf&amp;id=315411006 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="right-column">
+                                                    
+                                                        <a href=https://image.xiq.io/returnimage/?url=http%3A//ec2-54-200-50-167.us-west-2.compute.amazonaws.com/static/admin/upload/f4649516-fa33-11e9-b320-06945eaf9ebf.jpeg&amp;width=111&amp;height=84&amp;articleid=315411006 target="_blank" rel="noopener noreferrer">
+                                                                <img src=https://image.xiq.io/returnimage/?url=http%3A//ec2-54-200-50-167.us-west-2.compute.amazonaws.com/static/admin/upload/f4649516-fa33-11e9-b320-06945eaf9ebf.jpeg&amp;width=111&amp;height=84&amp;articleid=315411006 alt="dp">
+                                                            </a>
+                                                    
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                
+
+
+
+                            </div>
+                        </div>
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                            </footer>
+            </div>
+        </div>
+
+ 
+        <!-- Financial page ends -->
+
+         <!-- Competitors table starts -->
+         
+
+    <div class="page">
+                <div class="container">
+                        <header>
+                                <div class="title">
+                                    <h2>COMPETITORS</h2>
+                                </div>
+                                <div class="logo">
+                                    <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                                </div>
+                            </header>
+
+                            <div class="content-section">
+                                <div class="competitors-table-container">
+                                    <table>
+                                            <tr>
+                                                    <td>COMPANIES</td>
+                                                    
+                                                        <td class="picture-cell">
+                                                        <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="company-logo">
+                                                    </td>
+                                                    
+                                                        <td class="picture-cell">
+                                                        <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company3661/3661.jpg alt="company-logo">
+                                                    </td>
+                                                    
+                                                        <td class="picture-cell">
+                                                        <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company513/513.jpg alt="company-logo">
+                                                    </td>
+                                                    
+                                                        <td class="picture-cell">
+                                                        <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company2435/2435.jpg alt="company-logo">
+                                                    </td>
+                                                    
+
+
+                                                </tr>
+                                                <tr>
+                                                        <td>Name</td>
+                                                        
+                                                            <td>JPMorgan Chase &amp; Co.</td>
+                                                        
+                                                            <td>Morgan Stanley</td>
+                                                        
+                                                            <td>Wells Fargo</td>
+                                                        
+                                                            <td>The Goldman Sachs Group, Inc.</td>
+                                                        
+
+
+
+                                                </tr>
+                                                <tr>
+
+
+                                                        <td>WEBSITE</td>
+                                                        
+                                                            <td>jpmorganchase.com</td>
+                                                        
+                                                            <td>morganstanley.com</td>
+                                                        
+                                                            <td>www.wellsfargo.com</td>
+                                                        
+                                                            <td>www.goldmansachs.com</td>
+                                                        
+
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>FOUNDED</td>
+                                                        
+                                                            <td>1799</td>
+                                                        
+                                                            <td>1935</td>
+                                                        
+                                                            <td>1852</td>
+                                                        
+                                                            <td>1869</td>
+                                                        
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>INDUSTRY</td>
+                                                        
+                                                            <td>Financial Services</td>
+                                                        
+                                                            <td>Financial Services</td>
+                                                        
+                                                            <td>Financial Services</td>
+                                                        
+                                                            <td>Financial Services</td>
+                                                        
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>CEO</td>
+                                                        
+                                                            <td>James Dimon</td>
+                                                        
+                                                            <td>James Gorman</td>
+                                                        
+                                                            <td>Allen Parker</td>
+                                                        
+                                                            <td>David Solomon</td>
+                                                        
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>EMPLOYEES</td>
+                                                        
+                                                            <td>256K</td>
+                                                        
+                                                            <td>60K</td>
+                                                        
+                                                            <td>259K</td>
+                                                        
+                                                            <td>36K</td>
+                                                        
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>REVENUE</td>
+                                                        
+                                                            <td>$111B</td>
+                                                        
+                                                            <td>$29B</td>
+                                                        
+                                                            <td>$86B</td>
+                                                        
+                                                            <td>$35B</td>
+                                                        
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>MARKET CAP</td>
+                                                        
+                                                            <td>$356.49B</td>
+                                                        
+                                                            <td>$72.57B</td>
+                                                        
+                                                            <td>$205.17B</td>
+                                                        
+                                                            <td>$71.57B</td>
+                                                        
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>GROSS PROFIT</td>
+                                                        
+                                                            <td>$103.98B</td>
+                                                        
+                                                            <td>$35.7B</td>
+                                                        
+                                                            <td>$84.7B</td>
+                                                        
+                                                            <td>$31.72B</td>
+                                                        
+
+
+                                                </tr>
+                                                <tr>
+
+                                                        <td>OPERATING MARGIN</td>
+                                                        
+                                                            <td>39.34%</td>
+                                                        
+                                                            <td>33.46%</td>
+                                                        
+                                                            <td>36.37%</td>
+                                                        
+                                                            <td>36.59%</td>
+                                                        
+
+
+                                                </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <footer>
+                                    <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                        <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                            www.xiqonline.com
+                                        </a>
+                                    </p>
+                                </footer>
+                </div>
+         </div>
+ 
+        <!-- Competitors table ends -->
+
+        <!-- C-Suit 1 insights starts -->
+         
+    <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>C-SUITE INSIGHTS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+
+                        <div class="content-section">
+                            <div class="profile-section">
+                                <div class="name-container">
+                                    <div class="profile-picture">
+                                            <div class="circle" style="background-color: #dd5252;
+                                            ">
+                                                <img src=https://api.xiq.io/static/admin/images/Executives/16816.jpg alt="profile">
+                                            </div>
+                                        <div class="rectangle" style="background-color: #ed1012;">Captain</div>
+                                    </div>
+                                    <div class="name">
+                                        <h3>Douglas Petno</h3>
+                                        <p>Commercial Banking CEO <br><span>JPMorgan Chase &amp; Co.</span> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                               
+
+                                <div class="profile-info">
+                                    <h3>OVERVIEW</h3>
+
+                                    <p>Doug Petno is the Chief Executive Officer of Commercial Banking, one of the firm’s four lines of business. He reports to Jamie Dimon, Chairman and CEO, and is a member of the firm’s Operating Committee.</p>
+
+                                </div>
+                                
+
+
+
+
+
+
+                            </div>
+                            <div class="insights-section">
+                                <div class="insights-wheel">
+                                    <h2>INSIGHTS</h2>
+                                    <img src=https://api.xiq.io/static/admin/personalityv2/Ds.png alt="insight-wheel">
+                                </div>
+                                <div class="qualities">
+                                    <p>Douglas communicates casually, but directly, wanting to get to the bottom line in a conversation as quickly as possible. 
+                                    </p>
+                                    <h3>QUALITIES</h3>
+                                    <ul>
+                                        
+                                            <li>Enterprising</li>
+                                        
+                                            <li>Authoritative</li>
+                                        
+                                            <li>Assertive</li>
+                                        
+                                            <li>Direct</li>
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="skills-container">
+                                        <div class="skills" style="margin-right: 02%;width: 44%;">
+                                                <h3>SELLING</h3>
+                                                <p>Douglas is fast-paced, goal-oriented, and direct, so make your point quickly and stay focused</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Challenge ideas and assert yourself.</li>
+                                                    
+                                                        <li>Assert yourself, but keep it casual. </li>
+                                                    
+                                                        <li>Move quickly, but be precise.</li>
+                                                    
+                                                        <li>Relax and get to the point.</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                            <div class="skills">
+                                                <h3>COMMUNICATION</h3>
+                                                <p>Douglas likes to get to the point quickly. Have a purpose in mind before approaching them and be prepared for them to challenge anything they doesn’t agree with.</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Stay focused on one point</li>
+                                                    
+                                                        <li>Get right to the bottom line</li>
+                                                    
+                                                        <li>Keep conversation brief</li>
+                                                    
+                                                        <li>Use words like &quot;done&quot; and &quot;absolutely&quot; </li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=16816&amp;title=Douglas Petno target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+
+                            </footer>
+            </div>
+        </div>
+
+ 
+        <!-- C-Suit 1 insights ends -->
+
+        <!-- C-Suit 1 social starts -->
+         
+ <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title" style="width: 80%;">
+                                <h2 style="width: fit-content;">Douglas Petno</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                    </header>
+                        <div class="content-section">
+                            
+                                <div class="tweets-section">
+                                    <h2 class="news-heading" style="color: rgb(51, 63, 80);">TWEETS</h2>
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=http://pbs.twimg.com/profile_images/426765010413428736/O7aPUskQ_normal.jpeg alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>Maria Aparecida N.</h5>
+                                                            <h6>@mariaap1996</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Douglas Petno</span> ...JPMorgan Funds - Managed Reserves Fund X (acc) - USD/Lux-manager Douglas B. Petno;JPMorgan Funds - Sterling Managed Reserves Fund I (acc) - GBP/Lux-manager Emilio Saracho Rodriguez De Torres;...
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://api.xiq.io/static/admin/images/Executives/16816.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Douglas Petno</h5>
+                                                                <p>Commercial Banking CEO</p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+
+
+                                </div>
+                                
+                                
+                            
+
+
+
+
+
+
+
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=16816&amp;title=Douglas Petno target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+                            </footer>
+
+            </div>
+
+        </div>
+
+ 
+        <!-- C-Suit 1 social ends -->
+
+        <!-- C-Suit 2 insights starts -->
+         
+    <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>C-SUITE INSIGHTS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+
+                        <div class="content-section">
+                            <div class="profile-section">
+                                <div class="name-container">
+                                    <div class="profile-picture">
+                                            <div class="circle" style="background-color: #ff7337;
+                                            ">
+                                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/peterlscher.jpg alt="profile">
+                                            </div>
+                                        <div class="rectangle" style="background-color: #ff8a00;">Influencer</div>
+                                    </div>
+                                    <div class="name">
+                                        <h3>Peter Scher</h3>
+                                        <p>Head of Corporate Responsibility <br><span>JPMorgan Chase &amp; Co.</span> <br>Washington, District Of Columbia
+                                        </p>
+                                    </div>
+                                </div>
+                               
+                                <div class="profile-info" style="min-height: 220px;">
+                                    
+                                        <h3>EXPERIENCE</h3>
+                                        <h4>Head of Corporate Responsibility and Chairman of the Mid-Atlantic Region, JPMorgan Chase &amp; Co.</h4>
+                                        <p>JPMorgan Chase &amp; Co. | 2015 – Present</p><p></p>
+                                    
+                                    
+                                        <h3 style="padding-top: 90px;">EDUCATION</h3>
+                                        <h4>American University</h4>
+                                        <p>Bachelor&#39;s Degree </p>
+                                    
+                                </div>
+                                
+
+
+
+
+
+
+                            </div>
+                            <div class="insights-section">
+                                <div class="insights-wheel">
+                                    <h2>INSIGHTS</h2>
+                                    <img src=https://api.xiq.io/static/admin/personalityv2/Id.png alt="insight-wheel">
+                                </div>
+                                <div class="qualities">
+                                    <p>Peter is a decisive, creative influencer: Forward-thinking, ambitious, and spontaneous with a natural aversion to rigid structure. 
+                                    </p>
+                                    <h3>QUALITIES</h3>
+                                    <ul>
+                                        
+                                            <li>Spontaneous</li>
+                                        
+                                            <li>Visionary</li>
+                                        
+                                            <li>Cooperative</li>
+                                        
+                                            <li>Enthusiastic</li>
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="skills-container">
+                                        <div class="skills" style="margin-right: 02%;width: 44%;">
+                                                <h3>SELLING</h3>
+                                                <p>Keep your ideas at a high level when trying to persuade Peter. Talk about the future in optimistic terms and ask about what Peter is excited about.</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Share ideas and initiate collaboration.</li>
+                                                    
+                                                        <li>Speak boldly and show your personality.</li>
+                                                    
+                                                        <li>Stay optimistic and focus on the future.</li>
+                                                    
+                                                        <li>Be casual and express enthusiasm.</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                            <div class="skills">
+                                                <h3>COMMUNICATION</h3>
+                                                <p>Peter is articulate and passionate, but avoids too much formality. Body language is important to them, so smile and make eye contact frequently.</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Use self-deprecating humor (don&#39;t act like you take yourself too seriously)</li>
+                                                    
+                                                        <li>Emphasize the future</li>
+                                                    
+                                                        <li>Bring lots of energy to the conversation</li>
+                                                    
+                                                        <li>Speak with an informal tone</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=285681&amp;title=Peter Scher target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+
+                            </footer>
+            </div>
+        </div>
+
+ 
+        <!-- C-Suit 2 insights ends -->
+
+        <!-- C-Suit 2 social starts -->
+         
+ <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title" style="width: 80%;">
+                                <h2 style="width: fit-content;">Peter Scher</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                    </header>
+                        <div class="content-section">
+                            
+                                <div class="news-section">
+                                <h2 class="news-heading" style="color: rgb(51, 63, 80);">NEWS</h2>
+                                
+                                    <div class="news-box">
+                                        <div class="left-column" >
+                                            <div class="date">
+                                                <p>
+                                                    <span>APR 24, 2019 | </span>www.businessinsider.com
+                                                </p>
+                                            </div>
+                                            <div class="heading">
+                                                    <a href=https://www.businessinsider.com/jpmorgan-chases-corporate-responsibility-work-rivals-foundations-2019-4 target="_blank" rel="noopener noreferrer">
+                                                            <h3>The Head of JPMorgan&#39;s $350 Million Philanthropic Arm Explains the Challenges of Investing in Cities When Americans Are Increasingly Wary...</h3>
+                                                    </a>
+                                            </div>
+                                            <div class="description">
+                                                <p>Virtually every major corporation has a philanthropic arm, but JPMorgan Chase&#39;s has evolved into one that rivals major foundations in i... <a href=https://www.businessinsider.com/jpmorgan-chases-corporate-responsibility-work-rivals-foundations-2019-4 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                            <div class="right-column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=https%3A//amp.businessinsider.com/images/5cbf4cf44a16751f7f4420d5-1920-960.jpg&amp;width=111&amp;height=84&amp;articleid=298710658 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//amp.businessinsider.com/images/5cbf4cf44a16751f7f4420d5-1920-960.jpg&amp;width=111&amp;height=84&amp;articleid=298710658 alt="dp">
+                                                        </a>
+                                            </div>
+                                        
+                                </div>
+                                
+                                    <div class="news-box">
+                                        <div class="left-column" >
+                                            <div class="date">
+                                                <p>
+                                                    <span>APR 18, 2019 | </span>businessinsider.com
+                                                </p>
+                                            </div>
+                                            <div class="heading">
+                                                    <a href=https://www.businessinsider.com/jpmorgan-chase-is-investing-15-million-across-5-us-cities-2019-4 target="_blank" rel="noopener noreferrer">
+                                                            <h3>JPMorgan Chase Is Investing $15 Million Across 5 US Cities</h3>
+                                                    </a>
+                                            </div>
+                                            <div class="description">
+                                                <p>JPMorgan Chase&#39;s ambitious five-year, 500 million AdvancingCities plan has moved to five more cities. On Thursday, CEO Jamie Dimon anno... <a href=https://www.businessinsider.com/jpmorgan-chase-is-investing-15-million-across-5-us-cities-2019-4 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                            <div class="right-column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=http%3A//amp.businessinsider.com/images/5cb8b6cffa99af22b40b74a8-2732-1366.jpg&amp;width=111&amp;height=84&amp;articleid=298117919 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=http%3A//amp.businessinsider.com/images/5cb8b6cffa99af22b40b74a8-2732-1366.jpg&amp;width=111&amp;height=84&amp;articleid=298117919 alt="dp">
+                                                        </a>
+                                            </div>
+                                        
+                                </div>
+                                
+                                    <div class="news-box">
+                                        <div class="left-column" >
+                                            <div class="date">
+                                                <p>
+                                                    <span>FEB 21, 2019 | </span>www.apnews.com
+                                                </p>
+                                            </div>
+                                            <div class="heading">
+                                                    <a href=https://www.apnews.com/839448eadaa94e5fbb3f4d911a892631 target="_blank" rel="noopener noreferrer">
+                                                            <h3>JPMorgan Chase Commits $15 Million to Expand Economic Growth in Detroit&#39;s Neighborhoods</h3>
+                                                    </a>
+                                            </div>
+                                            <div class="description">
+                                                <p>JPMorgan Chase has committed 15 million to support Detroit&#39;s neighborhoods to help more Detroit residents benefit from the city&#39;s conti... <a href=https://www.apnews.com/839448eadaa94e5fbb3f4d911a892631 target="_blank" rel="noopener noreferrer">Read More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                            <div class="right-column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=https%3A//apnews.com/images/ShareLogo.png&amp;width=111&amp;height=84&amp;articleid=291435242 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//apnews.com/images/ShareLogo.png&amp;width=111&amp;height=84&amp;articleid=291435242 alt="dp">
+                                                        </a>
+                                            </div>
+                                        
+                                </div>
+                                
+
+                            </div>
+                                
+                                    <div class="tweets-section">
+                                    <h2 class="news-heading" style="color: rgb(51, 63, 80);">TWEETS</h2>
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=http://pbs.twimg.com/profile_images/875924791143702528/vw7GYOO3_normal.jpg alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>M. Gresham</h5>
+                                                            <h6>@memyselfandm</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Peter Scher</span> I sincerely hope that Jamie Dimon and Peter Scher are going to respond and take action on behalf of @jpmorgan . We have a lot of business with them, and I would hate to have to divest.
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/peterlscher.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Peter Scher</h5>
+                                                                <p>Head of Corporate Responsibility</p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=D:\XIQ-projects\mobile-api-services\mobile-api-services\static/admin/pptImages/no_image_person.png alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>Ashley Putnam</h5>
+                                                            <h6>@ashleyaputnam</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Peter Scher</span> Peter Scher @jpmorgan “You can’t go into a city unless people are working together. This work cannot succeed if you don’t have cross-sector buy-in.” #partnership #researchinaction #MobilityfromProverty
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/peterlscher.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Peter Scher</h5>
+                                                                <p>Head of Corporate Responsibility</p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+
+
+                                </div>
+                                    
+                                    
+                                        <div class="videos-section">
+                                    <h2 class="news-heading" style="color: rgb(51, 63, 80);">VIDEOS</h2>
+                                        
+                                            <div class="video-box">
+                                                <div class="column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/IAG0-oibt8c/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690772 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/IAG0-oibt8c/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690772 alt="thumbnail">
+                                                    </a>
+
+                                                </div>
+                                                <div class="column">
+<!--                                                    <a href=https://www.youtube.com/embed/IAG0-oibt8c target="_blank" rel="noopener noreferrer">-->
+                                                        <h3>Episode 135: JPMorgan Chase’s Peter Scher: A Banke...</h3><a href=https://www.youtube.com/embed/IAG0-oibt8c target="_blank" rel="noopener noreferrer" style="color:#0563c1; text-decoration: underline;">View More</a>
+<!--                                                    </a>-->
+
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="video-box">
+                                                <div class="column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/GlJ24AhZF78/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690773 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/GlJ24AhZF78/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690773 alt="thumbnail">
+                                                    </a>
+
+                                                </div>
+                                                <div class="column">
+<!--                                                    <a href=https://www.youtube.com/embed/GlJ24AhZF78 target="_blank" rel="noopener noreferrer">-->
+                                                        <h3>Peter Scher on Why JPMorgan Invests in Workforce D...</h3><a href=https://www.youtube.com/embed/GlJ24AhZF78 target="_blank" rel="noopener noreferrer" style="color:#0563c1; text-decoration: underline;">View More</a>
+<!--                                                    </a>-->
+
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="video-box">
+                                                <div class="column">
+                                                    <a href=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/ZSnoRC-c8fU/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690774 target="_blank" rel="noopener noreferrer">
+                                                            <img src=https://image.xiq.io/returnimage/?url=https%3A//i.ytimg.com/vi/ZSnoRC-c8fU/default.jpg&amp;width=139&amp;height=91&amp;articleid=314690774 alt="thumbnail">
+                                                    </a>
+
+                                                </div>
+                                                <div class="column">
+<!--                                                    <a href=https://www.youtube.com/embed/ZSnoRC-c8fU target="_blank" rel="noopener noreferrer">-->
+                                                        <h3>Smarter Faster: Peter Scher on improving communiti...</h3><a href=https://www.youtube.com/embed/ZSnoRC-c8fU target="_blank" rel="noopener noreferrer" style="color:#0563c1; text-decoration: underline;">View More</a>
+<!--                                                    </a>-->
+
+                                                </div>
+                                            </div>
+                                        
+
+
+                                </div>
+                                    
+                                
+                            
+
+
+
+
+
+
+
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=285681&amp;title=Peter Scher target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+                            </footer>
+
+            </div>
+
+        </div>
+
+ 
+        <!-- C-Suit 2 social ends -->
+
+        <!-- C-Suit 3 insights starts -->
+         
+    <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>C-SUITE INSIGHTS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+
+                        <div class="content-section">
+                            <div class="profile-section">
+                                <div class="name-container">
+                                    <div class="profile-picture">
+                                            <div class="circle" style="background-color: #ff7337;
+                                            background-image: -webkit-linear-gradient(top, #ff7337 0%, #5bded4 100%);">
+                                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/solgindi.jpg alt="profile">
+                                            </div>
+                                        <div class="rectangle" style="background-color: #85af35;">Harmonizer</div>
+                                    </div>
+                                    <div class="name">
+                                        <h3>Sol Gindi</h3>
+                                        <p>Chief Administrative Officer, Consumer Bank  <br><span>JPMorgan Chase &amp; Co.</span> <br>New York, New York
+                                        </p>
+                                    </div>
+                                </div>
+                               
+                                <div class="profile-info" style="min-height: 220px;">
+                                    
+                                        <h3>EXPERIENCE</h3>
+                                        <h4>Chief Administrative Officer</h4>
+                                        <p>JPMorgan Chase &amp; Co. | 2008 – Present</p><p></p>
+                                    
+                                    
+                                        <h3 style="padding-top: 90px;">EDUCATION</h3>
+                                        <h4>NYU Stern School of Business</h4>
+                                        <p>MBA,Finance 1992 – 1994</p>
+                                    
+                                </div>
+                                
+
+
+
+
+
+
+                            </div>
+                            <div class="insights-section">
+                                <div class="insights-wheel">
+                                    <h2>INSIGHTS</h2>
+                                    <img src=https://api.xiq.io/static/admin/personalityv2/Idcs.png alt="insight-wheel">
+                                </div>
+                                <div class="qualities">
+                                    <p>Sol thrives in an unstructured environment, loves exploring new ideas, and occasionally makes gut-driven decisions that might seem risky.
+                                    </p>
+                                    <h3>QUALITIES</h3>
+                                    <ul>
+                                        
+                                            <li>Influential</li>
+                                        
+                                            <li>Charming</li>
+                                        
+                                            <li>Charismatic</li>
+                                        
+                                            <li>Persuasive</li>
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="skills-container">
+                                        <div class="skills" style="margin-right: 02%;width: 44%;">
+                                                <h3>SELLING</h3>
+                                                <p>Sol is enthusiastic, decisive, prefers casual conversation, and feels uncomfortable about giving up control</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Speak boldly and show your personality.</li>
+                                                    
+                                                        <li>Share ideas and initiate collaboration.</li>
+                                                    
+                                                        <li>Relax and get to the point.</li>
+                                                    
+                                                        <li>Project confidence and speak directly.</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                            <div class="skills">
+                                                <h3>COMMUNICATION</h3>
+                                                <p>Sol will appreciate a break in momentum to joke around and tell stories while getting to know their colleagues on a more personal level</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Use self-deprecating humor (don&#39;t act like you take yourself too seriously)</li>
+                                                    
+                                                        <li>Bring lots of energy to the conversation</li>
+                                                    
+                                                        <li>Speak with an informal tone</li>
+                                                    
+                                                        <li>Emphasize the future</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=280010&amp;title=Sol Gindi target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+
+                            </footer>
+            </div>
+        </div>
+
+ 
+        <!-- C-Suit 3 insights ends -->
+
+        <!-- C-Suit 3 social starts -->
+         
+ <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title" style="width: 80%;">
+                                <h2 style="width: fit-content;">Sol Gindi</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                    </header>
+                        <div class="content-section">
+                            
+                                <div class="tweets-section">
+                                    <h2 class="news-heading" style="color: rgb(51, 63, 80);">TWEETS</h2>
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=http://pbs.twimg.com/profile_images/765379000923369473/HwhjdttM_normal.jpg alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>Diebold Nixdorf</h5>
+                                                            <h6>@dieboldnixdorf</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Sol Gindi</span> Our client partner, Sol Gindi from @jpmorgan @Chase, will be speaking about how software enables BT and innovation at #BT17. Stop by.
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/Persons/solgindi.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Sol Gindi</h5>
+                                                                <p>Chief Administrative Officer, Consumer Bank </p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+
+
+                                </div>
+                                
+                                
+                            
+
+
+
+
+
+
+
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=280010&amp;title=Sol Gindi target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+                            </footer>
+
+            </div>
+
+        </div>
+
+ 
+        <!-- C-Suit 3 social ends -->
+
+        <!-- C-Suit 4 insights starts -->
+         
+    <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title">
+                                <h2>C-SUITE INSIGHTS</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                        </header>
+
+                        <div class="content-section">
+                            <div class="profile-section">
+                                <div class="name-container">
+                                    <div class="profile-picture">
+                                            <div class="circle" style="background-color: #ffb236;
+                                            background-image: -webkit-linear-gradient(top, #ffb236 0%, #4fd39a 100%);">
+                                                <img src=https://api.xiq.io/static/admin/images/Executives/263421.jpg alt="profile">
+                                            </div>
+                                        <div class="rectangle" style="background-color: #85af35;">Harmonizer</div>
+                                    </div>
+                                    <div class="name">
+                                        <h3>Stacey Friedman</h3>
+                                        <p>General Counsel, JPMorgan Chase &amp; Co. <br><span>JPMorgan Chase &amp; Co.</span> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                               
+
+                                <div class="profile-info">
+                                    <h3>OVERVIEW</h3>
+
+                                    <p>Stacey Friedman is Executive Vice President and General Counsel for JPMorgan Chase &amp; Co. She also serves as a member of the firm&#39;s Operating Committee.
+
+Most recently, Friedman was the Deputy General Counsel for the firm and the General Counsel for the Corporate &amp; Investment Bank.</p>
+
+                                </div>
+                                
+
+
+
+
+
+
+                            </div>
+                            <div class="insights-section">
+                                <div class="insights-wheel">
+                                    <h2>INSIGHTS</h2>
+                                    <img src=https://api.xiq.io/static/admin/personalityv2/Ics.png alt="insight-wheel">
+                                </div>
+                                <div class="qualities">
+                                    <p>Stacey is friendly, casual, and extremely perceptive. &quot;Connecting the dots&quot; more quickly than others but occasionally rambling in conversation.
+                                    </p>
+                                    <h3>QUALITIES</h3>
+                                    <ul>
+                                        
+                                            <li>Visionary</li>
+                                        
+                                            <li>Innovative</li>
+                                        
+                                            <li>Influential</li>
+                                        
+                                            <li>Persuasive</li>
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="skills-container">
+                                        <div class="skills" style="margin-right: 02%;width: 44%;">
+                                                <h3>SELLING</h3>
+                                                <p>To convince Stacey, use a logical appeal and give them time to process the various potential outcomes to a particular decision. It’s okay to be creative, but don’t rely purely on emotion to do the selling.</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Talk about feelings more than tasks.</li>
+                                                    
+                                                        <li>Mind the details and speak rationally. </li>
+                                                    
+                                                        <li>Stay objective and share your ideas.</li>
+                                                    
+                                                        <li>Speak boldly and show your personality.</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                            <div class="skills">
+                                                <h3>COMMUNICATION</h3>
+                                                <p>Stacey appreciates when you ask questions, it helps keep their attention and taps into their curiosity. They has a tendency to go off on a tangent when excited by a topic of interest.</p>
+                                                <h3>Tips</h3>
+                                                <ul>
+                                                    
+                                                        <li>Switch up the subject to keep things interesting</li>
+                                                    
+                                                        <li>Use colorful descriptions</li>
+                                                    
+                                                        <li>Interrupt them if the conversation is going too long</li>
+                                                    
+                                                        <li>Use visual aids</li>
+                                                    
+
+                                                </ul>
+                                            </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=263421&amp;title=Stacey Friedman target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+
+                            </footer>
+            </div>
+        </div>
+
+ 
+        <!-- C-Suit 4 insights ends -->
+
+        <!-- C-Suit 4 social starts -->
+         
+ <div class="page">
+            <div class="container">
+                    <header>
+                            <div class="title" style="width: 80%;">
+                                <h2 style="width: fit-content;">Stacey Friedman</h2>
+                            </div>
+                            <div class="logo">
+                                <img src=https://s3-us-west-2.amazonaws.com/xiqapp-static/company-logos/Company466/466.jpg alt="">
+                            </div>
+                    </header>
+                        <div class="content-section">
+                            
+                                <div class="tweets-section">
+                                    <h2 class="news-heading" style="color: rgb(51, 63, 80);">TWEETS</h2>
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=D:\XIQ-projects\mobile-api-services\mobile-api-services\static/admin/pptImages/no_image_person.png alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>Out Leadership</h5>
+                                                            <h6>@outleadership</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Stacey Friedman</span> “Respect us for the substantive work that we do. It’s not that hard.” -Stacey Friedman, General Counsel, JPMorgan Chase @jpmorgan #OutWOMEN #OutLEADER #ReturnOnEquality
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://api.xiq.io/static/admin/images/Executives/263421.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Stacey Friedman</h5>
+                                                                <p>General Counsel, JPMorgan Chase &amp; Co.</p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+                                            
+                                                <div class="tweet-box"><div class="line"></div>
+                                                    <div class="rowName">
+                                                        <div class="columnOne">
+                                                            <img src=D:\XIQ-projects\mobile-api-services\mobile-api-services\static/admin/pptImages/no_image_person.png alt="tweet">
+                                                        </div>
+                                                        <div class="columnTwo">
+                                                            <h5>myGwork</h5>
+                                                            <h6>@mygwork</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowDesc">
+                                                        
+                                                            <p>
+                                                                <span>About: @Stacey Friedman</span> Stacey Friedman at @jpmorgan is #2 on the @OUTstandingiB and @FT ’s list of #LGBT leaders! Congratulations!
+                                                        </p>
+                                                        
+
+                                                    </div>
+                                                    <div class="rowName">
+                                                            <div class="columnOne">
+                                                                <img src=https://api.xiq.io/static/admin/images/Executives/263421.jpg alt="tweet">
+                                                            </div>
+                                                            <div class="columnTwo">
+                                                                <h5>Stacey Friedman</h5>
+                                                                <p>General Counsel, JPMorgan Chase &amp; Co.</p>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            
+                                        
+
+
+                                </div>
+                                
+                                
+                            
+
+
+
+
+
+
+
+                        </div>
+
+                        <footer>
+                                <p><img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                                    <a href="http://xiqonline.com" target="_blank" rel="noopener noreferrer">
+                                        www.xiqonline.com
+                                    </a>
+                                </p>
+                                <a href=http://xiqinc.app.link/i8guDBexRL/?entity=person&amp;source=companypdf&amp;id=263421&amp;title=Stacey Friedman target="_blank" rel="noopener noreferrer">
+
+
+                                                VIEW FULL PROFILE
+
+
+                                </a>
+                            </footer>
+
+            </div>
+
+        </div>
+
+ 
+        <!-- C-Suit 4 social ends -->
+
+        <!-- last page starts -->
+        <div class="page">
+            <div class="container">
+                <div class="poweredby-container">
+                    <div class="poweredby-section">
+                        <p>Prepared By</p>
+                        <img src="https://api.xiq.io/static/admin/img/xiq-logo-mini.png" alt="xiQ">
+                        <p> 100 Redwood Shores Parkway, Suite 100 <br>
+                            Redwood City, CA 94065, USA
+                        </p>
+                        <p>
+                            <a href="www.xiqonline.com" target="_blank" rel="noopener noreferrer">www.xiqonline.com</a>
+                            <br>
+                            <a href="mailto:support@xiqinc.com" target="_blank" rel="noopener noreferrer">support@xiqinc.com</a>
+                        </p>
+                        <p>Gain Your Business Insights from xiQ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- last page ends -->
+    </main>
+
+</body>
+</html>
