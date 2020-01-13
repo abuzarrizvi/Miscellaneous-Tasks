@@ -1,0 +1,206 @@
+<html><head>
+  <meta charset="utf-8">
+  <title>Django Highcharts Example</title>
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container" style="position: relative;"></div>
+
+</figure>
+
+<script>
+    Highcharts.chart('container', {
+    chart: {
+        type: 'pie'
+    },
+
+
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: false,
+                format: '{point.y:.1f}%',
+                style: {
+                            fontWeight: 'normal'
+                        },
+                connectorColor: '#B8C5D6',
+
+            }
+        }
+    },
+
+    series: [
+        {
+            name: "Browsers",
+            innerSize: '76%',
+            data: [
+                
+                {
+                    name: 'alert_3',
+                    y: 1.5873015873015872,
+                    color : '#93A4BA'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_5',
+                    y: 4.761904761904762,
+                    color : '#4DC929'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_8',
+                    y: 1.5873015873015872,
+                    color : '#6C35C0'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_9',
+                    y: 17.46031746031746,
+                    color : '#006FF1'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_11',
+                    y: 4.761904761904762,
+                    color : '#7ED6FF'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_12',
+                    y: 26.984126984126984,
+                    color : '#F59223'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_13',
+                    y: 6.349206349206349,
+                    color : '#F68CAD'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_16',
+                    y: 1.5873015873015872,
+                    color : '#B846CA'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_17',
+                    y: 6.349206349206349,
+                    color : '#1A3A96'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_19',
+                    y: 4.761904761904762,
+                    color : '#F4C600'
+
+                }
+                
+                        ,
+                    
+                
+                {
+                    name: 'alert_21',
+                    y: 23.809523809523807,
+                    color : '#B83E78'
+
+                }
+                
+                
+            ]
+        }
+    ]
+});
+
+  </script>
+<div style="
+                                        position: absolute;
+                                        top: 172px;
+                                        left: 290px;
+                                        z-index: 99999999999;
+                                        text-align: center;
+                                        width: 120px;
+                                        background-color: transparent;
+                                    "><p style="font-family: Arial; font-size: 15px;margin: 0;/* border-bottom: 1px solid #E9EEF5; */color: #7487AA;/* margin-bottom: 10px; */">TRIGGERS<br><span style="
+    font-size: 35px; font-family: Arial;
+">63</span>
+</p><hr style="border-color: #847d7d;color: #2196F3;/* border-style: ridge; *//* border-width: 1px; *//* border-color: red; */background-color: #E9EEF5;border: none;min-height: 2px;">
+    <p style="
+    font-size: 15px;
+    margin: 0;
+    color: #7487AA; font-family: Arial;
+              ">ACCOUNTS<br><span style="
+    font-size: 35px; font-family: Arial;
+">14</span>
+    </p></div><div style="
+                                    position: absolute;
+                                    top: 25px;
+                                    left: 505px;
+                                    z-index: 99999999999;
+                                    text-align: center;
+                                    background-color: #ffffff;
+                                    min-width: 1000;
+                                    min-height: 30px;
+                                    "><p style="font-size:44px;"><b></b></p><p style="font-size:22px;"><b></b></p></div>
+
+<div style="
+                                    position: absolute;
+                                    top: 376px;
+                                    left: 1314px;
+                                    z-index: 99999999999;
+                                    text-align: center;
+                                    background-color: #ffffff;
+                                    min-width: 170px;
+                                    min-height: 30px;
+                                    "><p style="font-size:44px;"><b></b></p><p style="font-size:22px;"><b></b></p></div>
+
+</body></html>
